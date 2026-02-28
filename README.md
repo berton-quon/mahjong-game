@@ -1,16 +1,76 @@
-# React + Vite
+# 香港麻雀 - Hong Kong Mahjong Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite implementation of Hong Kong Mahjong (麻雀) - a classic four-player tile game.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Full Mahjong Gameplay**: Complete implementation of Hong Kong Mahjong rules including:
+  - Tile drawing and discarding
+  - Melds (pung, kong, chi)
+  - Win detection and scoring
+  - Self-draw wins (自摸)
+  
+- **AI Opponents**: Play against three AI-controlled players with intelligent tile selection and claiming logic
 
-## React Compiler
+- **Responsive UI**: Clean, traditional-inspired interface with:
+  - Full-width top bar showing round info and scores
+  - Central game table showing discard pool
+  - Player hand display at the bottom
+  - Wind indicators and turn notifications
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Scoring System**: Comprehensive point calculation based on fan (fan 番) and base points with fair distribution between players
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+The game will open at `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+## How to Play
+
+1. **Your Turn**: You'll see "YOUR TURN" in the center of the table
+2. **Draw**: The AI automatically handles drawing tiles for you
+3. **Select & Discard**: Click a tile in your hand to select it, click again to discard
+4. **Claims**: When other players discard, you can claim tiles to form melds or win
+5. **Scoring**: Wins are automatically calculated and points distributed
+
+## Game Rules
+
+- **Melds**: Form combinations of tiles (three identical tiles, or three consecutive tiles in same suit)
+- **Win Condition**: Win with a complete hand of matched pairs and melds
+- **Minimum Fan**: Adjustable minimum fan requirement to win (set via controls)
+- **Wall**: Limited tiles in the wall; game ends if exhausted without winner
+
+## Layout
+
+- **Top Bar**: Round info, wall count, player scores
+- **Center Table**: Current player indicator, discard pool, wall remaining
+- **Side Panels**: Left (West) and Right (East) player tiles
+- **Bottom**: Your hand (South) and melds display
+
+## Technical Details
+
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **State Management**: React Hooks
+- **Styling**: Inline CSS with traditional green felt aesthetic
