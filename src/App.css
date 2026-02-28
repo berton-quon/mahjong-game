@@ -1,7 +1,27 @@
+html, body, #root { height: 100%; margin: 0; }
+body { box-sizing: border-box; overflow-x: auto; }
+
+/* container: center but constrain width so content isn't zoomed off-screen */
+.App {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* center tables without forcing full-width */
+table { margin: 0 auto; }
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
 }
 
