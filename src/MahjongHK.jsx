@@ -663,11 +663,6 @@ export default function MahjongHK() {
         button:hover{filter:brightness(1.2)}
       `}</style>
 
-      {/* Corner decos */}
-      {[{t:8,l:8,bw:"1px 0 0 1px"},{t:8,r:8,bw:"1px 1px 0 0"},{b:8,l:8,bw:"0 0 1px 1px"},{b:8,r:8,bw:"0 1px 1px 0"}].map((s,i)=>(
-        <div key={i} style={{position:"fixed",width:40,height:40,borderColor:"rgba(201,168,76,0.2)",borderStyle:"solid",pointerEvents:"none",zIndex:1,...s,bw:undefined,borderWidth:s.bw}}/>
-      ))}
-
       {/* Game grid */}
       <div style={{display:"grid",gridTemplateAreas:`"ti ti ti" "la c ra" "bh bh bh"`,gridTemplateRows:"auto 1fr auto",gridTemplateColumns:"220px 1fr 220px",width:"100%",maxWidth:1200,height:"100%",margin:"0 auto",padding:10}}>
 
