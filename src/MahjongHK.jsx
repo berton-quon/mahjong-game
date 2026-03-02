@@ -826,7 +826,7 @@ export default function MahjongHK() {
       </div>
 
       {/* Log */}
-      <div style={{position:"fixed",bottom:10,left:10,width:200,maxHeight:100,overflowY:"auto",fontSize:"0.62rem",letterSpacing:"0.05em",lineHeight:1.5,pointerEvents:"none"}}>
+      <div style={{position:"fixed",bottom:10,left:10,width:200,maxHeight:600,overflowY:"auto",fontSize:"1rem",letterSpacing:"0.05em",lineHeight:1.5,pointerEvents:"none"}}>
         {G.logs.slice(-15).map((l,i)=>(
           <div key={i} style={{borderBottom:"1px solid rgba(201,168,76,0.1)",padding:"1px 0",color:l.important?"rgba(201,168,76,0.85)":"rgba(201,168,76,0.4)"}}>{l.msg}</div>
         ))}
